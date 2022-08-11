@@ -1,0 +1,18 @@
+const hamburger = document.getElementById('hamburger');
+
+window.onscroll = function(){
+    const header = document.querySelector('header');
+    const fixnav = header.offsetTop;
+
+    if(window.pageYOffset > fixnav){
+        header.classList.add('navbar-fixed');
+    } else {
+        header.classList.remove('navbar-fixed');
+    }
+}
+
+const navmenu = document.getElementById('nav-menu');
+hamburger.addEventListener('click', ()=>{
+    hamburger.classList.toggle('hamburger-active');
+    navmenu.classList.toggle('hidden');
+});
