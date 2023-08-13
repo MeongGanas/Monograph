@@ -1,118 +1,646 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio 2</title>
-    <link rel="stylesheet" href="dist/output.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-</head>
-<body class="overflow-x-hidden">
-
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="overflow-x-hidden">
     <!-- header start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full items-center z-10">
-        <div class="container">
-            <div class="flex items-center justify-between relative">
-                <div class="px-6 xl:px-14">
-                    <a href="#" class="font-bold block py-6 text-lg">logo</a>
-                </div>
-                <div class="flex items-center px-4">
-                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-                        <span class="hamburger-line origin-top-left"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line origin-bottom-left"></span>
-                    </button>
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-6 xl:px-14">
+            <a href="#" class="font-bold block py-6 text-lg"
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAshJREFUWEftlkuoTlEUx3/XO8oEg1sG8oiBokwMFQN5zshAUcgjZSISM6+k7kDIo7wmGMkrRUxNPJO8JqQMkIHIm/61ttY9d+9z9vmc67uDu0fnO2ettX/f3v/9X7uDPjY6+hgP/UBVO9L0Cq0BpgOPgMvAqyqA4vemgW4Bs2ySBcCVdgINAD4BwwxiJPCxnUDaqnsG8AyYXBdG8U1u2TrgkEGcAla0G+g0sNwg1gJHehtoEDAE+JyYSNs0yb5NAx7a83DgG/AjBzB3y8YAF4EnwMpI4dHAW3v/BRgB/LLfJ01Pi1xMki0HaAZwCei0KkuB84WKCw1Yr28Cs+27dHTCnt8AirtTtlJVQKtMqINdkX3AlkLRXcA2e7cT2GHPit3sYr8D64HjKagUkPRyEJDzhvEVWA2ciRQrM0QJ/Rgw1OUdBTbEdBUDCnqZ6Qq8BBYDDyIwOYYokauVjHX5t4EeuioCydyuOr0o/wawBPiQWGZNdt++PQWmJOJGAeecvhQmXc1z+d2MUTrRKRpvBX8De0wP4cTE5qpjiFrN3QUNvrA/8VPF/QoJ6DEw0QHtBba7IxwDqmOIAtIB2OoKJYEUoyN+DZCvhHEdWAa8T2xFyhCL4dqys8Ac9+EdMNdbQUzU8hv5juDCeA3oOlEUdZkheiDVulAQtfxIviQd/R2pY68WIa8IvUkJsWOfMkQ/h2qolmqGIeuQx6mldBtVxijBHgAGuqz9zuxShhjCu4BNLlfC3QgcTmx/1vVDfqQ+Jn/SUC9Tf9KouiH61qFeJ9+R/yRH1QqFxKAr3ZXDPSfHEJUv75kQ00uMKhdIudKAWkq4fuQaojq/elgPvfwrUDG/jiGW7VItUZcVqmOI/wXouXN1f0PMnrzJLcs1xNpwdUTti+cYYm0YJbQKNA6YD0wF7toFrCWAYlKrQI1M3qSG+oF6bQWqCv8BFuiQJdMLUhgAAAAASUVORK5CYII="
+              />
+            </a>
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span class="hamburger-line origin-top-left"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line origin-bottom-left"></span>
+            </button>
 
-                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-xl rounded-lg max-w-[200px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-                        <ul class="block lg:flex">
-                            <li class="group">
-                                <a href="#home" class="list mx-8 lg:text-white group-hover:text-textcolor">Beranda</a>
-                            </li>
-                            <li class="group">
-                                <a href="#about" class="list mx-8 lg:text-white group-hover:text-textcolor">Tentang Saya</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-xl rounded-lg max-w-[200px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="list mx-8 lg:text-white group-hover:text-textcolor"
+                    >Beranda</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
+      </div>
     </header>
     <!-- header end -->
 
-
     <!-- section start -->
-    <section id="home" class="mt-24">
-        <div class="container">
-            <div class="flex flex-wrap overflow-hidden">
-                <div class="w-full self-end mb-10 lg:w-1/2 lg:order-2">
-                    <div class="bg-secondary w-[600px] h-[600px] -top-32 -right-32 md:w-[1000px] md:h-[1000px] rounded-full absolute -z-50 md:-top-96 md:-right-80 lg:-right-96 lg:-top-[420px]"></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="464"><defs><rect id="a" width="597.554" height="396.861" x="0" y="0" rx="3"/><rect id="c" width="331" height="184" x="0" y="0" rx="5"/><rect id="h" width="167" height="341" x="0" y="0" rx="12"/><rect id="i" width="155" height="330" x="0" y="0" rx="9"/><rect id="k" width="140" height="184" x="0" y="0" rx="5"/><filter id="g" width="213.8%" height="100.7%" x="-53.3%" y="-16.1%" filterUnits="objectBoundingBox"><feOffset dx="6" dy="40" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="25"/><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.243459558 0 0 0 0 0.279312558 0 0 0 0 0.375398597 0 0 0 0.255293252 0"/></filter><path id="e" d="M3 0h769.629a3 3 0 013 3v16.006H0V3a3 3 0 013-3z"/></defs><g fill="none" fill-rule="evenodd"><g transform="translate(184 9)"><rect width="635" height="434" x="81" fill="#191D36" fill-rule="nonzero" rx="12"/><rect width="629" height="428" x="84" y="3" fill="#0B0E21" fill-rule="nonzero" rx="10"/><rect width="603" height="402" x="97" y="16" fill="#16171B" fill-rule="nonzero" rx="5"/><g transform="translate(100 18)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><use fill="#EBEDF4" fill-rule="nonzero" xlink:href="#a"/><g mask="url(#b)"><g transform="translate(129 14)"><g transform="translate(0 75)"><rect width="331" height="47" fill="#FFF" rx="5"/><g transform="translate(16 18)"><rect width="53" height="5" fill="#B1B4C7" rx="2.5"/><rect width="34" height="5" y="9" fill="#D4D7E6" rx="2.5"/><g transform="translate(75)"><rect width="53" height="5" fill="#B1B4C7" rx="2.5"/><rect width="34" height="5" y="9" fill="#D4D7E6" rx="2.5"/></g><g transform="translate(177)"><rect width="53" height="5" fill="#B1B4C7" rx="2.5"/><rect width="34" height="5" y="9" fill="#D4D7E6" rx="2.5"/></g><g transform="translate(250)"><rect width="53" height="5" fill="#B1B4C7" rx="2.5"/><rect width="34" height="5" y="9" fill="#D4D7E6" rx="2.5"/></g></g></g><g transform="translate(0 136)"><mask id="d" fill="#fff"><use xlink:href="#c"/></mask><use fill="#FFF" xlink:href="#c"/><g mask="url(#d)"><g transform="translate(-33 32)"><rect width="184" height="24" x="17" fill="#FF5E5E" rx="12"/><rect width="184" height="24" x="17" y="96" fill="#FF5E5E" rx="12"/><rect width="24" height="24" x="209" fill="#BC4747" rx="12"/><rect width="88" height="24" x="209" y="32" fill="#FF5E5E" rx="12"/><rect width="114" height="24" x="87" y="31.547" fill="#BC4747" rx="12"/><rect width="50" height="24" x="247" y="64.53" fill="#FF5E5E" rx="12"/><rect width="79" height="24" y="63.925" fill="#FF5E5E" rx="12"/><rect width="24" height="24" x="305" y="32" fill="#BC4747" rx="12"/></g></g></g><rect width="77" height="5" fill="#CBCEDC" rx="2.5"/><g transform="translate(0 26)" fill="#8C90A3"><rect width="66" height="19" rx="9.5"/><rect width="31" height="19" x="76" y=".288" rx="9.5"/><rect width="31" height="19" x="115" rx="9.5"/></g></g></g><g mask="url(#b)"><path fill="#353740" d="M0 0h107v397H0z"/><g transform="translate(15 12)"><rect width="77" height="5" y="68" fill="#4A4E5D" rx="2.5"/><rect width="77" height="5" y="87" fill="#4A4E5D" rx="2.5"/><rect width="77" height="5" y="106" fill="#4A4E5D" rx="2.5"/><rect width="77" height="5" y="125" fill="#4A4E5D" rx="2.5"/><rect width="77" height="5" y="144" fill="#4A4E5D" rx="2.5"/><rect width="77" height="5" y="366" fill="#4A4E5D" rx="2.5"/><g transform="translate(0 25)"><g transform="translate(24 2)"><rect width="53" height="5" fill="#7B7F90" rx="2.5"/><rect width="34" height="5" y="9" fill="#4A4E5D" rx="2.5"/></g><circle cx="9" cy="9" r="9" fill="#FF5E5E"/></g><rect width="77" height="9" fill="#8C90A3" rx="4.5"/></g></g></g><g fill="#4A5166" fill-rule="nonzero" opacity=".098" transform="translate(387 8)"><rect width="15.64" height="4" rx="2"/><rect width="3.68" height="4" x="19.32" rx="1.84"/></g><g transform="translate(0 430)"><mask id="f" fill="#fff"><use xlink:href="#e"/></mask><use fill="#242942" fill-rule="nonzero" xlink:href="#e"/><rect width="126.689" height="57.968" x="324.47" y="-46.564" fill="#2E334F" fill-rule="nonzero" mask="url(#f)" rx="10"/></g><path fill="#1A1C27" fill-rule="nonzero" d="M0 448h776a7 7 0 01-7 7H7a7 7 0 01-7-7z"/></g><g fill-rule="nonzero" transform="translate(44 9.21)"><use fill="#000" filter="url(#g)" xlink:href="#h"/><use fill="#242942" xlink:href="#h"/></g><g transform="translate(50 15)"><mask id="j" fill="#fff"><use xlink:href="#i"/></mask><use fill="#EBEDF4" fill-rule="nonzero" xlink:href="#i"/><g mask="url(#j)"><path fill="#353740" d="M0 0h155v77H0z"/><g transform="translate(8 108)"><mask id="l" fill="#fff"><use xlink:href="#k"/></mask><use fill="#FFF" xlink:href="#k"/><g mask="url(#l)"><g transform="matrix(-1 0 0 1 293 32)"><rect width="184" height="24" x="17" fill="#FF5E5E" rx="12"/><rect width="184" height="24" x="17" y="96" fill="#FF5E5E" rx="12"/><rect width="24" height="24" x="209" fill="#BC4747" rx="12"/><rect width="88" height="24" x="209" y="32" fill="#FF5E5E" rx="12"/><rect width="114" height="24" x="87" y="31.547" fill="#BC4747" rx="12"/><rect width="50" height="24" x="247" y="64.53" fill="#FF5E5E" rx="12"/><rect width="79" height="24" y="63.925" fill="#FF5E5E" rx="12"/><rect width="24" height="24" x="305" y="32" fill="#BC4747" rx="12"/></g></g></g><rect width="140" height="47" x="8" y="52" fill="#FFF" rx="5"/><rect width="77" height="5" x="37" y="21" fill="#4A4E5D" rx="2.5"/></g></g><g transform="translate(74 85)"><rect width="102" height="5" fill="#B1B4C7" rx="2.5"/><rect width="65" height="5" y="9" fill="#D4D7E6" rx="2.5"/></g></g></svg>
-                </div>
-                <div class="w-full self-center p-4 mb-10 md:px-20 lg:w-1/2 lg:p-5 lg:order-1 xl:pl-10">
-                   <h4 class="text-sm md:text-md lg:text-lg"><span class="text-white bg-primary rounded-full px-3 py-1 font-bold mr-2">NEW</span><span class="tracking-widest text-secondary">MONOGRAPH DASHBOARD</span></h4>
-                   <h1 class="font-bold text-xl mt-5 mb-7 leading-relaxed md:text-2xl lg:text-4xl">POWERFUL INSIGHTS <span class="block">INTO YOUR TEAM</span></h1>
-                   <p class="text-md md:text-lg lg:text-xl mb-8 w-[80%] text-secondary ">Project planning and time tracking for agile teams</p>
-                    <div class="flex align-center">
-                        <a href="#" class=" bg-textcolor text-white text-[12px] rounded-md px-5 py-3 mr-3 font-bold md:text-md lg:text-lg hover:bg-opacity-90 transition duration-300">SCHEDULE A DEMO</a>
-                        <h5 class="text-sm md:text-md lg:text-lg tracking-widest text-secondary flex items-center">TO SEE A PREVIEW</h5>
-                    </div>
-               </div>
+    <section id="home" class="mt-20">
+      <div class="">
+        <div class="flex flex-wrap overflow-hidden">
+          <div class="w-full self-end mb-10 lg:w-1/2 lg:order-2">
+            <div
+              class="bg-secondary w-[600px] h-[600px] -top-32 -right-40 md:w-[1000px] md:h-[1000px] rounded-full absolute -z-50 md:-top-96 md:-right-80 lg:-right-96 lg:-top-[420px]"
+            ></div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="960"
+              height="464"
+            >
+              <defs>
+                <rect
+                  id="a"
+                  width="597.554"
+                  height="396.861"
+                  x="0"
+                  y="0"
+                  rx="3"
+                />
+                <rect id="c" width="331" height="184" x="0" y="0" rx="5" />
+                <rect id="h" width="167" height="341" x="0" y="0" rx="12" />
+                <rect id="i" width="155" height="330" x="0" y="0" rx="9" />
+                <rect id="k" width="140" height="184" x="0" y="0" rx="5" />
+                <filter
+                  id="g"
+                  width="213.8%"
+                  height="100.7%"
+                  x="-53.3%"
+                  y="-16.1%"
+                  filterUnits="objectBoundingBox"
+                >
+                  <feOffset
+                    dx="6"
+                    dy="40"
+                    in="SourceAlpha"
+                    result="shadowOffsetOuter1"
+                  />
+                  <feGaussianBlur
+                    in="shadowOffsetOuter1"
+                    result="shadowBlurOuter1"
+                    stdDeviation="25"
+                  />
+                  <feColorMatrix
+                    in="shadowBlurOuter1"
+                    values="0 0 0 0 0.243459558 0 0 0 0 0.279312558 0 0 0 0 0.375398597 0 0 0 0.255293252 0"
+                  />
+                </filter>
+                <path
+                  id="e"
+                  d="M3 0h769.629a3 3 0 013 3v16.006H0V3a3 3 0 013-3z"
+                />
+              </defs>
+              <g fill="none" fill-rule="evenodd">
+                <g transform="translate(184 9)">
+                  <rect
+                    width="635"
+                    height="434"
+                    x="81"
+                    fill="#191D36"
+                    fill-rule="nonzero"
+                    rx="12"
+                  />
+                  <rect
+                    width="629"
+                    height="428"
+                    x="84"
+                    y="3"
+                    fill="#0B0E21"
+                    fill-rule="nonzero"
+                    rx="10"
+                  />
+                  <rect
+                    width="603"
+                    height="402"
+                    x="97"
+                    y="16"
+                    fill="#16171B"
+                    fill-rule="nonzero"
+                    rx="5"
+                  />
+                  <g transform="translate(100 18)">
+                    <mask id="b" fill="#fff"><use xlink:href="#a" /></mask>
+                    <use fill="#EBEDF4" fill-rule="nonzero" xlink:href="#a" />
+                    <g mask="url(#b)">
+                      <g transform="translate(129 14)">
+                        <g transform="translate(0 75)">
+                          <rect width="331" height="47" fill="#FFF" rx="5" />
+                          <g transform="translate(16 18)">
+                            <rect
+                              width="53"
+                              height="5"
+                              fill="#B1B4C7"
+                              rx="2.5"
+                            />
+                            <rect
+                              width="34"
+                              height="5"
+                              y="9"
+                              fill="#D4D7E6"
+                              rx="2.5"
+                            />
+                            <g transform="translate(75)">
+                              <rect
+                                width="53"
+                                height="5"
+                                fill="#B1B4C7"
+                                rx="2.5"
+                              />
+                              <rect
+                                width="34"
+                                height="5"
+                                y="9"
+                                fill="#D4D7E6"
+                                rx="2.5"
+                              />
+                            </g>
+                            <g transform="translate(177)">
+                              <rect
+                                width="53"
+                                height="5"
+                                fill="#B1B4C7"
+                                rx="2.5"
+                              />
+                              <rect
+                                width="34"
+                                height="5"
+                                y="9"
+                                fill="#D4D7E6"
+                                rx="2.5"
+                              />
+                            </g>
+                            <g transform="translate(250)">
+                              <rect
+                                width="53"
+                                height="5"
+                                fill="#B1B4C7"
+                                rx="2.5"
+                              />
+                              <rect
+                                width="34"
+                                height="5"
+                                y="9"
+                                fill="#D4D7E6"
+                                rx="2.5"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                        <g transform="translate(0 136)">
+                          <mask id="d" fill="#fff">
+                            <use xlink:href="#c" />
+                          </mask>
+                          <use fill="#FFF" xlink:href="#c" />
+                          <g mask="url(#d)">
+                            <g transform="translate(-33 32)">
+                              <rect
+                                width="184"
+                                height="24"
+                                x="17"
+                                fill="#FF5E5E"
+                                rx="12"
+                              />
+                              <rect
+                                width="184"
+                                height="24"
+                                x="17"
+                                y="96"
+                                fill="#FF5E5E"
+                                rx="12"
+                              />
+                              <rect
+                                width="24"
+                                height="24"
+                                x="209"
+                                fill="#BC4747"
+                                rx="12"
+                              />
+                              <rect
+                                width="88"
+                                height="24"
+                                x="209"
+                                y="32"
+                                fill="#FF5E5E"
+                                rx="12"
+                              />
+                              <rect
+                                width="114"
+                                height="24"
+                                x="87"
+                                y="31.547"
+                                fill="#BC4747"
+                                rx="12"
+                              />
+                              <rect
+                                width="50"
+                                height="24"
+                                x="247"
+                                y="64.53"
+                                fill="#FF5E5E"
+                                rx="12"
+                              />
+                              <rect
+                                width="79"
+                                height="24"
+                                y="63.925"
+                                fill="#FF5E5E"
+                                rx="12"
+                              />
+                              <rect
+                                width="24"
+                                height="24"
+                                x="305"
+                                y="32"
+                                fill="#BC4747"
+                                rx="12"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                        <rect width="77" height="5" fill="#CBCEDC" rx="2.5" />
+                        <g transform="translate(0 26)" fill="#8C90A3">
+                          <rect width="66" height="19" rx="9.5" />
+                          <rect
+                            width="31"
+                            height="19"
+                            x="76"
+                            y=".288"
+                            rx="9.5"
+                          />
+                          <rect width="31" height="19" x="115" rx="9.5" />
+                        </g>
+                      </g>
+                    </g>
+                    <g mask="url(#b)">
+                      <path fill="#353740" d="M0 0h107v397H0z" />
+                      <g transform="translate(15 12)">
+                        <rect
+                          width="77"
+                          height="5"
+                          y="68"
+                          fill="#4A4E5D"
+                          rx="2.5"
+                        />
+                        <rect
+                          width="77"
+                          height="5"
+                          y="87"
+                          fill="#4A4E5D"
+                          rx="2.5"
+                        />
+                        <rect
+                          width="77"
+                          height="5"
+                          y="106"
+                          fill="#4A4E5D"
+                          rx="2.5"
+                        />
+                        <rect
+                          width="77"
+                          height="5"
+                          y="125"
+                          fill="#4A4E5D"
+                          rx="2.5"
+                        />
+                        <rect
+                          width="77"
+                          height="5"
+                          y="144"
+                          fill="#4A4E5D"
+                          rx="2.5"
+                        />
+                        <rect
+                          width="77"
+                          height="5"
+                          y="366"
+                          fill="#4A4E5D"
+                          rx="2.5"
+                        />
+                        <g transform="translate(0 25)">
+                          <g transform="translate(24 2)">
+                            <rect
+                              width="53"
+                              height="5"
+                              fill="#7B7F90"
+                              rx="2.5"
+                            />
+                            <rect
+                              width="34"
+                              height="5"
+                              y="9"
+                              fill="#4A4E5D"
+                              rx="2.5"
+                            />
+                          </g>
+                          <circle cx="9" cy="9" r="9" fill="#FF5E5E" />
+                        </g>
+                        <rect width="77" height="9" fill="#8C90A3" rx="4.5" />
+                      </g>
+                    </g>
+                  </g>
+                  <g
+                    fill="#4A5166"
+                    fill-rule="nonzero"
+                    opacity=".098"
+                    transform="translate(387 8)"
+                  >
+                    <rect width="15.64" height="4" rx="2" />
+                    <rect width="3.68" height="4" x="19.32" rx="1.84" />
+                  </g>
+                  <g transform="translate(0 430)">
+                    <mask id="f" fill="#fff"><use xlink:href="#e" /></mask>
+                    <use fill="#242942" fill-rule="nonzero" xlink:href="#e" />
+                    <rect
+                      width="126.689"
+                      height="57.968"
+                      x="324.47"
+                      y="-46.564"
+                      fill="#2E334F"
+                      fill-rule="nonzero"
+                      mask="url(#f)"
+                      rx="10"
+                    />
+                  </g>
+                  <path
+                    fill="#1A1C27"
+                    fill-rule="nonzero"
+                    d="M0 448h776a7 7 0 01-7 7H7a7 7 0 01-7-7z"
+                  />
+                </g>
+                <g fill-rule="nonzero" transform="translate(44 9.21)">
+                  <use fill="#000" filter="url(#g)" xlink:href="#h" />
+                  <use fill="#242942" xlink:href="#h" />
+                </g>
+                <g transform="translate(50 15)">
+                  <mask id="j" fill="#fff"><use xlink:href="#i" /></mask>
+                  <use fill="#EBEDF4" fill-rule="nonzero" xlink:href="#i" />
+                  <g mask="url(#j)">
+                    <path fill="#353740" d="M0 0h155v77H0z" />
+                    <g transform="translate(8 108)">
+                      <mask id="l" fill="#fff"><use xlink:href="#k" /></mask>
+                      <use fill="#FFF" xlink:href="#k" />
+                      <g mask="url(#l)">
+                        <g transform="matrix(-1 0 0 1 293 32)">
+                          <rect
+                            width="184"
+                            height="24"
+                            x="17"
+                            fill="#FF5E5E"
+                            rx="12"
+                          />
+                          <rect
+                            width="184"
+                            height="24"
+                            x="17"
+                            y="96"
+                            fill="#FF5E5E"
+                            rx="12"
+                          />
+                          <rect
+                            width="24"
+                            height="24"
+                            x="209"
+                            fill="#BC4747"
+                            rx="12"
+                          />
+                          <rect
+                            width="88"
+                            height="24"
+                            x="209"
+                            y="32"
+                            fill="#FF5E5E"
+                            rx="12"
+                          />
+                          <rect
+                            width="114"
+                            height="24"
+                            x="87"
+                            y="31.547"
+                            fill="#BC4747"
+                            rx="12"
+                          />
+                          <rect
+                            width="50"
+                            height="24"
+                            x="247"
+                            y="64.53"
+                            fill="#FF5E5E"
+                            rx="12"
+                          />
+                          <rect
+                            width="79"
+                            height="24"
+                            y="63.925"
+                            fill="#FF5E5E"
+                            rx="12"
+                          />
+                          <rect
+                            width="24"
+                            height="24"
+                            x="305"
+                            y="32"
+                            fill="#BC4747"
+                            rx="12"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <rect
+                      width="140"
+                      height="47"
+                      x="8"
+                      y="52"
+                      fill="#FFF"
+                      rx="5"
+                    />
+                    <rect
+                      width="77"
+                      height="5"
+                      x="37"
+                      y="21"
+                      fill="#4A4E5D"
+                      rx="2.5"
+                    />
+                  </g>
+                </g>
+                <g transform="translate(74 85)">
+                  <rect width="102" height="5" fill="#B1B4C7" rx="2.5" />
+                  <rect width="65" height="5" y="9" fill="#D4D7E6" rx="2.5" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div
+            class="w-full self-center p-4 pl-5 mb-10 md:px-20 lg:w-1/2 lg:p-5 lg:order-1 xl:pl-20"
+          >
+            <h4 class="text-sm md:text-md lg:text-lg">
+              <span
+                class="text-white bg-primary rounded-full px-3 py-1 font-bold mr-2"
+                >NEW</span
+              ><span class="tracking-widest text-secondary"
+                >MONOGRAPH DASHBOARD</span
+              >
+            </h4>
+            <h1
+              class="font-bold text-xl mt-5 mb-7 leading-relaxed md:text-2xl lg:text-4xl"
+            >
+              POWERFUL INSIGHTS <span class="block">INTO YOUR TEAM</span>
+            </h1>
+            <p
+              class="text-md md:text-lg lg:text-xl mb-8 w-[80%] text-secondary"
+            >
+              Project planning and time tracking for agile teams
+            </p>
+            <div class="flex align-center">
+              <a
+                href="#"
+                class="bg-textcolor text-white text-[12px] rounded-md px-5 py-3 mr-3 font-bold md:text-md lg:text-lg hover:bg-opacity-90 transition duration-300"
+                >SCHEDULE A DEMO</a
+              >
+              <a
+                href="#"
+                class="text-sm md:text-md lg:text-lg tracking-widest text-secondary flex items-center"
+                >TO SEE A PREVIEW</a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- section end -->
 
-
     <!-- footer start -->
-    <footer id="about" class="mt-24 ">
-        <div class="bg-textcolor text-white py-12 px-6 sm:px-10 sm:py-16 md:px-20">
-            <h1 class="text-2xl md:text-3xl lg:text-4xl">Farrel G Jaohari</h1>
-            <div class="flex flex-wrap mt-14">
-                <div class="w-full mb-10 sm:w-1/2 lg:w-[35%]">
-                    <h1 class="text-md mb-1 md:text-lg lg:text-xl">Follow saya : </h1>
-                    <div class="flex gap-2">
-                            <a href="https://youtube.com/" target="_blank" class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300">
-                                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>YouTube</title>
-                                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/MeongGanas" target="_blank" class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300">
-                                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>GitHub</title>
-                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com/" target="_blank" class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300">
-                                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Twitter</title>
-                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                                </svg>
-                            </a>
-                            <a href="https://twitter.com/" target="_blank" class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300">
-                                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Facebook</title>
-                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                </svg>
-                            </a>
-                    </div>
-                </div>
-                <div class="w-full sm:w-1/2 lg:w-[35%]">
-                    <h1 class="text-md md:text-lg lg:text-xl">Masukan Untuk Saya : </h1>
-                    <div class="flex gap-1">
-                        <input type="text" width="" class="rounded-sm shadow-sm shadow-slate-300 text-primary px-2 focus:shadow-none">
-                        <button type="submit" class="bg-secondary hover:bg-opacity-80 transition duration-300 px-2 py-1 rounded-sm shadow-xl">Kirim</button>
-                    </div>
-                </div>
+    <footer id="about" class="mt-24">
+      <div
+        class="bg-textcolor text-white py-12 px-4 sm:px-10 sm:py-16 md:px-20"
+      >
+        <h1 class="text-2xl md:text-3xl lg:text-4xl">Farrel G Jaohari</h1>
+        <div class="flex flex-wrap mt-14">
+          <div class="w-full mb-10 sm:w-1/2 lg:w-[35%]">
+            <h1 class="text-md mb-1 md:text-lg lg:text-xl">Follow saya :</h1>
+            <div class="flex gap-2">
+              <a
+                href="https://youtube.com/"
+                target="_blank"
+                class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/MeongGanas"
+                target="_blank"
+                class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Twitter</title>
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                class="border rounded-full w-9 h-9 flex justify-center items-center border-slate-100 hover:text-secondary transition duration-300"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
             </div>
+          </div>
+          <div class="w-full sm:w-1/2 lg:w-[35%]">
+            <h1 class="text-md md:text-lg lg:text-xl mb-1">
+              Masukan Untuk Saya :
+            </h1>
+            <div class="flex gap-2">
+              <input
+                type="text"
+                width=""
+                class="rounded-md shadow-sm shadow-slate-600 text-primary px-2 focus:shadow-none"
+              />
+              <button
+                type="submit"
+                class="bg-black hover:bg-secondary transition duration-300 px-3 py-1 rounded-md shadow-xl"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- footer end -->
 
     <script src="dist/script.js"></script>
-
-</body>
+  </body>
 </html>
